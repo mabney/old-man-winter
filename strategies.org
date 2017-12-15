@@ -1,0 +1,41 @@
+#+Title: Strategies, tactics and plays for Old Man Winter
+#+Date: 2017-12-14
+
+* Introduction
+  An outline and description of various plays and tactics to implement
+  for Old Man Winter.
+
+* Defensive tactics
+** Zone Ds
+** Setting up on a stopped disc
+** Flow of the game
+*** Flash poaching
+    - Accelerating from behind the disc into the forward lane.
+    - Off of a side handler to an in cut.
+    - From the front (or near front) of the stack to either an in-cut or
+      down the line strike cut.
+*** Containment D
+    When: Against offenses whose downfield cutters generate big yardage gaining
+    completions (could be hucks, but not necessarily). The essential elements are:
+    - A flatter mark, could even be straight-up.
+    - Side handler defenders use either the flash poach, or even set-up in the lane.
+    - When the stall count gets high handler defenders play tight.
+    - Defenders in the stack or covering cutters who are not currently making
+      a hot cut, always look to pair-up and bracket an in and out cut.
+    - Handler dump-switch. On a lateral dump handlers should be ready to switch
+      rather than crossing horizontal positioning. Take away the lane before closing in.
+*** Marking
+    A good mark does not stop all break mark throws but forces a disruption in the
+    timing of the throw or causes the thrower to adjust the release or direction
+    of the throw to be less favorable. Elements of a good mark:
+    - Position the body to block throws based on what throw the thrower is showing.
+      Don't rely on sticking an arm out to block a throw! Use the body! Force the
+      thrower to pivot.
+    - Active mark. Always keep the arms in motion and unpredictable. Move the
+      body by moving the feet, not just leaning.
+    - Triangle marking. As the thrower makes a full pivot, move the body diagonally
+      back to cut-off the angle or get a block. Then close back in to the thrower
+      the appropriate distance.
+    - Spacing. Some throwers get rattled by a tight mark. Good throwers can more easily
+      break a mark that is too tight. It's very hard to huck against a tight mark.
+*** Switching
