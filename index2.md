@@ -1,8 +1,8 @@
 ---
 layout: page
-title: simple site
-tagline: Easy websites with GitHub Pages
-description: Minimal tutorial on making a simple website with GitHub Pages
+title: Old Man Winter
+tagline: All the really important stuff
+description: All the information you need to play on Old Man Winter
 ---
 
 [Github Pages](https://pages.github.com) provide a simple way to make a

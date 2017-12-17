@@ -1,6 +1,19 @@
 #+Title: Strategies, tactics and plays for Old Man Winter
 #+Date: 2017-12-14
 
+#+options: toc:nil
+#+options: num:nil
+
+#+begin_export html
+---
+layout: page
+title: Strategies, Tactics and Plays for Old Man Winter
+tagline: All the really important stuff
+description: All the information you need to play on Old Man Winter
+---
+#+end_export
+
+
 * Introduction
   An outline and description of various plays and tactics to implement
   for Old Man Winter.
