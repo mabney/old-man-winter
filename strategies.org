@@ -1,41 +1,97 @@
-#+Title: Strategies, tactics and plays for Old Man Winter
+#+Title: Tactics and plays for Old Man Winter
 #+Date: 2017-12-14
 
+#+options: toc:nil
+#+options: num:nil
+#+options: H:6
+
+#+begin_export html
+---
+layout: page
+title: Tactics and Plays for Old Man Winter
+description: All the information you need to play on Old Man Winter
+---
+#+end_export
+
+
 * Introduction
+#+html: ---
   An outline and description of various plays and tactics to implement
   for Old Man Winter.
 
 * Defensive tactics
+#+html: ---
+  There are many possible things to be done. Our focus is on fundamental
+  individual and team defense, and essential defensive sets.
 ** Zone Ds
+**** 3-3-1
+     This is a standard three person cup.
+     - TODO Decide on cup positioning and motion
+     - TODO Placement of the short deep
+     - TODO Sideline trap
+**** 2-3-2
+     This is often useful when there are less challenging throwing conditions,
+     or just to switch up what the offense has to deal with and figure out.
+     - TODO Force sideline or force middle
 ** Setting up on a stopped disc
+   Off a pull we need to be prepared to set-up against different offensive stacks.
+**** Vert stack
+     - Look for pairings to bracket offensive players' first cut
+**** H stack
+     - Offense often initiates with mirrored diagonal cuts, one in and one out.
+     - With disc at the middle handler the two middle defenders guard in and the
+       outside defenders guarding the out cuts while pinching in.
+     - With disc at an outside handler the two near defenders play in the far defenders
+       play out and shifted over towards the disc.
+     - Handler defenders play loose at low stalls to stop throws to the outside.
+**** Side stack
+     - Typically the middle and deep defenders can poach well inside.
+     - Front of the stack defenders play more honest, but watch for a flood play.
+     - An isolated defender stops the in cut and looks for a switch on a deep cut.
 ** Flow of the game
-*** Flash poaching
-    - Accelerating from behind the disc into the forward lane.
-    - Off of a side handler to an in cut.
-    - From the front (or near front) of the stack to either an in-cut or
-      down the line strike cut.
-*** Containment D
-    When: Against offenses whose downfield cutters generate big yardage gaining
-    completions (could be hucks, but not necessarily). The essential elements are:
-    - A flatter mark, could even be straight-up.
-    - Side handler defenders use either the flash poach, or even set-up in the lane.
-    - When the stall count gets high handler defenders play tight.
-    - Defenders in the stack or covering cutters who are not currently making
-      a hot cut, always look to pair-up and bracket an in and out cut.
-    - Handler dump-switch. On a lateral dump handlers should be ready to switch
-      rather than crossing horizontal positioning. Take away the lane before closing in.
-*** Marking
-    A good mark does not stop all break mark throws but forces a disruption in the
-    timing of the throw or causes the thrower to adjust the release or direction
-    of the throw to be less favorable. Elements of a good mark:
-    - Position the body to block throws based on what throw the thrower is showing.
-      Don't rely on sticking an arm out to block a throw! Use the body! Force the
-      thrower to pivot.
-    - Active mark. Always keep the arms in motion and unpredictable. Move the
-      body by moving the feet, not just leaning.
-    - Triangle marking. As the thrower makes a full pivot, move the body diagonally
-      back to cut-off the angle or get a block. Then close back in to the thrower
-      the appropriate distance.
-    - Spacing. Some throwers get rattled by a tight mark. Good throwers can more easily
-      break a mark that is too tight. It's very hard to huck against a tight mark.
-*** Switching
+**** Flash poaching
+     - Accelerating from behind the disc into the forward lane.
+     - Off of a side handler to an in cut.
+     - From the front (or near front) of the stack to either an in-cut or
+       down the line strike cut.
+**** Containment D
+     When: Against offenses whose downfield cutters generate big yardage gaining
+     completions (could be hucks, but not necessarily). The essential elements are:
+     - A flatter mark, could even be straight-up.
+     - Side handler defenders use either the flash poach, or even set-up in the lane.
+     - When the stall count gets high handler defenders play tight.
+     - Defenders in the stack or covering cutters who are not currently making
+       a hot cut, always look to pair-up and bracket an in and out cut.
+     - Handler dump-switch. On a lateral dump handlers should be ready to switch
+       rather than crossing horizontal positioning. Take away the lane before closing in.
+**** Marking
+     A good mark does not stop all break mark throws but forces a disruption in the
+     timing of the throw or causes the thrower to adjust the release or direction
+     of the throw to be less favorable. Elements of a good mark:
+     - Position the body to block throws based on what throw the thrower is showing.
+       Don't rely on sticking an arm out to block a throw! Use the body! Force the
+       thrower to pivot.
+     - Active mark. Always keep the arms in motion and unpredictable. Move the
+       body by moving the feet, not just leaning.
+     - Triangle marking. As the thrower makes a full pivot, move the body diagonally
+       back to cut-off the angle or get a block. Then close back in to the thrower
+       the appropriate distance.
+     - Spacing. Some throwers get rattled by a tight mark. Good throwers can more easily
+       break a mark that is too tight. It's very hard to huck against a tight mark.
+**** Switching
+     We want to encourage field awareness while playing defense and, in particular,
+     awareness of when you defending near the disc to look to switch onto an in cutter or
+     when you are deep to switch onto someone who is going long.
+
+* Defensive playbook
+#+html: ---
+  These are the lessons and plays to communicate to the team as a whole.
+  We want to keep things fairly simple and straightforward, focusing on fundamentals
+  at first. If there's time in the season we can get fancier. These are things
+  we might want to make videos of and create drills for.
+  - 3-3-1 zone
+  - 2-3-2 zone
+  - Marking
+  - Sideline trap
+  - H-stack D
+  - Side-stack D (?)
