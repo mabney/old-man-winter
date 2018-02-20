@@ -1,0 +1,632 @@
+#+Title:	Analysis of Old Man Winter at Nationals 2017
+#+Author:	Mark Abney
+#+Email:	mark.a.abney@gmail.com
+#+Date:		2018-02-04
+
+#+Startup: latexpreview
+#+Property: header-args :session *R:nats_2017* :results output
+
+* Introduction
+  I'll take a look at the performance of Old Man Winter at Nationals 2017 too
+  see where we did well, and what we should improve on to step up to the next
+  level.
+#+begin_src R :results silent
+  nats <- read.csv("nationals_2017_data.csv", header=T, strip.white=T)
+#+end_src
+
+* Completion rates
+  Look at general completion rates and break it down by situation.
+#+begin_src R :results silent
+  ## ## Count up the number of throws that were turnonvers and not
+  ## thr.us <- nats[nats$Who == 'Us', c("Opponent", "No_of_throws", "Last_throw", "Shot_on_goal")]
+  ## thr.us <- thr.us[complete.cases(thr.us), ]
+  ## n.throws <- sum(thr.us[, "No_of_throws"])
+  ## (completion.rate <-  1 - length(thr.us[thr.us[, "Last_throw"] == 'turn', 1]) / n.throws)
+
+  ## ## Shot on goal completion rate
+  ## (n.sg.score <- nrow(thr.us[thr.us[, "Shot_on_goal"] == TRUE & thr.us[, "Last_throw"] == 'score', ]))
+  ## (n.sg <- nrow(thr.us[thr.us[, "Shot_on_goal"] == TRUE, ]))
+  ## (sg.completion.rate <- n.sg.score / n.sg)
+  ## (se.sg.rate <- sqrt(sg.completion.rate * (1 - sg.completion.rate) / n.sg))
+
+  ## ##n1 <- subset(thr.us, Shot_on_goal == TRUE & Last_throw == 'score')
+
+  ## ## Non-shot on goal completion rate.
+  ## turn.rows <- thr.us[thr.us[, "Last_throw"] == 'turn',]
+  ## n.turns <- nrow(turn.rows)
+  ## n.nonsg.turns <- nrow(turn.rows[turn.rows[, "Shot_on_goal"] == FALSE,])
+  ## n.nonsg <- n.throws - n.sg
+  ## (nonsg.completion.rate <- 1 - n.nonsg.turns / n.nonsg)
+
+  ## ## Completion rates by opponent
+  ## sur.data <- subset(nats, Opponent == 'Surly' & Who == 'Them', select=c('No_of_throws', 'Last_throw'))
+  ## n.sur.thr <- sum(sur.data[, "No_of_throws"])
+  ## n.sur.turn <- length(which(sur.data[, "Last_throw"] == 'turn'))
+  ## (sur.compl <- 1 - n.sur.turn / n.sur.thr)
+
+  ## (vs.sur.compl <- 1 - nrow(subset(thr.us, Opponent == 'Surly' & Last_throw == 'turn', Last_throw)) / sum(subset(thr.us, Opponent == 'Surly', No_of_throws)))
+
+
+  ## ### Below here is just a test to write a function to get completion rates
+  ## test.d <- nats[c(9:19, 38:45), 1:10]
+  ## who <- 'Us'
+  ## opp <- 'Surly'
+
+  completion.rates <- function(data, opp = 'All', who = 'Us') {
+      if (opp == 'All') {
+	  data.s <- subset(data, Who == who)
+      } else {
+	  data.s <- subset(data, Opponent == opp & Who == who)
+      }
+      data.s <- subset(data.s, !is.na(No_of_throws))
+      n.throws <- sum(data.s[, "No_of_throws"])
+      data.turns <- subset(data.s, Last_throw == 'turn')
+      n.turns <- nrow(data.turns)
+      comp.rate <- 1 - n.turns / n.throws
+      se.comp.rate <- sqrt(comp.rate * (1 - comp.rate) / n.throws)
+
+      data.nsg.turns <- subset(data.turns, Shot_on_goal == FALSE)
+      nsg.turns <- nrow(data.nsg.turns)
+      nsg.throws <- n.throws - nrow(subset(data.s, Shot_on_goal == TRUE))
+      nsg.comp.rate <- 1 - nsg.turns / nsg.throws
+      se.nsg.comp.rate <- sqrt(nsg.comp.rate * (1 - nsg.comp.rate) / nsg.throws)
+
+      c.rate <- function(data.t) {
+	  n.trn <- nrow(subset(data.t, Last_throw == 'turn'))
+	  rate <- 1 - n.trn / nrow(data.t)
+	  c(rate, sqrt(rate * (1 - rate) / nrow(data.t)))
+      }
+
+      sg.comp.rate <- c.rate(subset(data.s, Shot_on_goal == TRUE))
+
+      sg.huck <- c.rate(subset(data.s, Shot_on_goal == TRUE & (SG_origin == 'HF' | SG_origin == 'HM'
+	  | SG_origin == 'HB')))
+      sg.mid <-  c.rate(subset(data.s, Shot_on_goal == TRUE & (SG_origin == 'MF' | SG_origin == 'MM'
+	  | SG_origin == 'MB')))
+      sg.redz <-  c.rate(subset(data.s, Shot_on_goal == TRUE & (SG_origin == 'RF' | SG_origin == 'RM'
+	  | SG_origin == 'RB')))
+
+      c(comp.rate = comp.rate,
+	se.comp.rate = se.comp.rate,
+	nsg.rate = nsg.comp.rate,
+	se.nsg.rate = se.nsg.comp.rate,
+	sg.rate = sg.comp.rate[1],
+	se.sg.rate = sg.comp.rate[2],
+	sg.huck = sg.huck[1],
+	se.sg.huck = sg.huck[2],
+	sg.mid = sg.mid[1],
+	se.sg.mid = sg.mid[2],
+	sg.redz = sg.redz[1],
+	se.sg.redz = sg.redz[2])
+  }
+
+  n.from.se <- function(rate, se) {
+      round(rate * (1 - rate) / se^2)
+  }
+#+end_src
+
+#+begin_src R :results silent
+  omw.rates <- completion.rates(nats)
+
+  ## Group our opponents into top teams or mid-level teams
+  top.data <- subset(nats, Opponent == 'Surly' | Opponent == 'Johnny Walker')
+  top.rates.them <- completion.rates(top.data, who='Them')
+  top.rates.us <- completion.rates(top.data)
+
+  mid.data <- subset(nats, Opponent == 'Endless Sunset' | Opponent == 'Hootenany'
+		     | Opponent == 'Kalakala' | Opponent == 'Reckon')
+  mid.rates.them <- completion.rates(mid.data, who='Them')
+  mid.rates.us <- completion.rates(mid.data)
+
+  grouped.results <- rbind(omw=omw.rates,
+			   top.them=top.rates.them,
+			   top.us=top.rates.us,
+			   mid.them=mid.rates.them,
+			   mid.us=mid.rates.us)
+  grouped.rates <- grouped.results[, c(1, 3, 5)]
+#+end_src
+
+** Old Man Winter
+   We can look at our completion rates across all games at Nationals 2017, as a general baseline.
+   We also break this down into two categories, throws that are shots on goal (SG) and throws that
+   are not shots on goal (NSG). A shot on goal is a throw that was either caught in the endzone for
+   a goal or if it had been caught, would have been a goal.
+#+name: omw_rates
+#+begin_src R :results graphics :file Figures/omw_rates.png
+  ## r.idx <- c(5, 3, 1)
+  ## se.idx <- r.idx + 1
+  ## dotchart(omw.rates[r.idx], labels=c("Shot on goal rate", "Non-shot on goal rate", "Overall rate"), xlim=c(.4, 1),
+  ## 	 pch=20, xlab='Completion rate', lcolor='white', main='OMW completion rates')
+  ## low <- omw.rates[r.idx] - 1.96 * omw.rates[se.idx]
+  ## upp <- omw.rates[r.idx] + 1.96 * omw.rates[se.idx]
+  ## segments(low, 1:3, upp, 1:3)
+
+  library(Hmisc)
+  r.idx <- c(5, 3, 1)
+  se.idx <- r.idx + 1
+  low <- omw.rates[r.idx] - 1.96 * omw.rates[se.idx]
+  upp <- omw.rates[r.idx] + 1.96 * omw.rates[se.idx]
+  N <- n.from.se(omw.rates[r.idx], omw.rates[se.idx])
+  dotchart3(omw.rates[r.idx], labels=c("Shots on goal", "Non shots on goal", "Overall"), xlim=c(.4, 1),
+	    pch=20, xlab='Completion rate', lcolor='white', main='OMW completion rates', auxdata=N,
+	    auxtitle='N throws')
+  segments(low, 1:3, upp, 1:3)
+  abline(v=4:10/10, col='#22222222', lty=3)
+#+end_src
+
+#+results: omw_rates
+[[file:Figures/omw_rates.png]]
+
+#+begin_src R :noweb yes :results graphics :file Figures/omw_rates.pdf
+<<omw_rates>>
+#+end_src
+
+Our overall pass completion rate was src_R[:exports
+results :results value]{as.numeric(round(omw.rates[1], 2))} {{{results(=0.89=)}}}, which
+is not very good. Worse, however, is our rate of completions when we are
+actually trying to score src_R[:exports results :results
+value]{as.numeric(round(omw.rates['sg.rate'], 2))} {{{results(=0.58=)}}}, which
+is terrible.
+
+** Other teams
+   Compare our completion rates against the teams we played. Here, I group the
+   opponents into 'Top' teams, Surly and Johnny Walker; and 'Mid' teams, all
+   our other opponents except Critical Mass.
+#+name: vs_top_mid_rates
+#+begin_src R :results graphics :file Figures/vs_top_mid_rates.png
+  ## colnames(top.mid.rates) <- c("Completion rate", "Non shot on goal rate", "Shot on goal rate")
+  ## dotchart(top.mid.rates)
+
+  library(Hmisc)
+  ##par.orig <- par(xpd = FALSE)
+  c.idx <- c(1, 3, 5)
+  r.idx <- 5:2
+  se.idx <- c.idx + 1
+  top.mid.rates <- grouped.results[r.idx, c.idx]
+  tm.vec <- as.vector(top.mid.rates)
+  se.vec <- as.vector(grouped.results[r.idx, se.idx])
+  N.top.mid <- n.from.se(tm.vec, se.vec)
+  gr <- factor(c(rep("Overall", 4), rep('Non Shots on Goal', 4), rep('Shots on Goal', 4)),
+	       levels=c('Overall', 'Non Shots on Goal', 'Shots on Goal'), ordered=TRUE)
+  lb <- rep(rownames(top.mid.rates), 3)
+  lb2 <- rep(c('OMW vs Mid', 'Mid teams', 'OMW vs Top', 'Top teams'), 3)
+  dotchart3(tm.vec, lb2, groups=gr, xlab='Completion rate', auxdata = N.top.mid, auxtitle = 'N throws',
+	    xlim=c(0.4, 1), pch=20, lcolor='white', col=c('red', 'black'))
+  abline(v=4:10/10, lty=3, col='#22222222')
+  low <- tm.vec - 1.96 * se.vec
+  upp <- tm.vec + 1.96 * se.vec
+  y.seg <- c(13:16, 7:10, 1:4)
+  x.lowest <- par('usr')[1]
+  low <- ifelse(low < x.lowest, x.lowest, low)
+  segments(low, y.seg, upp, y.seg, col=c('red', 'black'))
+  ##par(par.orig)
+#+end_src
+
+#+results: vs_top_mid_rates
+[[file:Figures/vs_top_mid_rates.png]]
+
+#+begin_src R :noweb yes :results graphics :file Figures/vs_top_mid_rates.pdf
+<<vs_top_mid_rates>>
+#+end_src
+
+Some important points to be learned from the above plot:
+1. Top teams, against us, complete about 95% of their passes, while mid-level team
+   complete about 90% of passes.
+2. Shots on goal are harder to complete; the field is more compressed overall. Top
+   teams still complete about 90% of passes, while mid-level teams are at 70% or lower.
+3. Even for a mid-level team our shots on goal completion rate is bad and absolutely atrocious
+   against top level teams.
+4. The strong defense of top teams makes a huge difference. This is evident from our
+   substantially lower completion rate against top teams across all categories compared
+   to our completion rate against mid-level teams.
+
+** Shots on goal throws
+   Our data includes the field location from where a shot on goal was thrown. Hucks
+   are from our own half of the field, mid-range is from the brick mark to midfield,
+   and the redzone is from the goal line to the brick mark. Completion rates grouped
+   by the location of the thrower and the team's level:
+#+name: sg_loc_rates
+#+begin_src R :results graphics :file Figures/sg_loc_rates.png
+  c.idx <- c(7, 9, 11)
+  r.idx <- 5:1
+  se.idx <- c.idx + 1
+  thr.vec <- as.vector(grouped.results[r.idx, c.idx])
+  se.vec <- as.vector(grouped.results[r.idx, se.idx])
+  N.thr <- n.from.se(thr.vec, se.vec)
+  gr <- factor(c(rep("Hucks", 5), rep("Mid-range", 5), rep("Redzone", 5)),
+	       levels=c("Hucks", "Mid-range", "Redzone"), ordered=TRUE)
+  ##lb <- rev(rownames(grouped.results))
+  lb <- rep(c('OMW vs Mid-level', 'Mid-level teams', 'OMW vs Top', 'Top teams', 'OMW overall'), 3)
+  dotchart3(thr.vec, lb, groups=gr, xlab='Completion rate', auxdata=N.thr, auxtitle='N throws',
+	    xlim=c(0,1), pch=20, lcolor='white', col=rep(c(rep(c('red', 'black'), 2), 'red'), 3))
+  abline(v=0:10/10, lty=3, col='#22222222')
+  low <- thr.vec - 1.96 * se.vec
+  upp <- thr.vec + 1.96 * se.vec
+  y.seg <- c(15:19, 8:12, 1:5)
+  x.bord <- par('usr')[c(1,2)]
+  low <- ifelse(low < x.bord[1], x.bord[1], low)
+  upp <- ifelse(upp > x.bord[2], x.bord[2], upp)
+  segments(low, y.seg, upp, y.seg, col=rep(c(rep(c('red', 'black'), 2), 'red'), 3))
+#+end_src
+
+#+results: sg_loc_rates
+[[file:Figures/sg_loc_rates.png]]
+
+#+begin_src R :noweb yes :results graphics :file Figures/sg_loc_rates.pdf
+<<sg_loc_rates>>
+#+end_src
+
+The 95% confidence intervals are wide because of some low numbers of throws, but
+the takeaways here are:
+1. Compared to the other teams, our hucks sucked, but we knew that.
+2. Compared to the other teams, our mid-range shots on goal also sucked. I'm
+   not sure we knew that.
+3. In the redzone our completion rate was somewhat better than the other
+   mid-level teams, but at about 85% is still low compared to what we want.
+4. The top level teams had about 2/3 of their shots on goal from within the redzone
+   and mid-level teams were close to that. We only had about 50% of our shots
+   on goal from within the redzone.
+5. Top and mid-level teams both had similar numbers of shots from mid-range and from
+   hucks, with a bias to more mid-range shots. We actually had more hucks than mid-range
+   shots. Our completion rate for both of those, though, was so bad that maybe
+   it does not matter.
+
+* Turnover predictors
+  What variables tend to be correlated with a possession ending in a turnover? Variables
+  that we have data on are: Received_pull, Start_location, No_of_throws. Where the thrower
+  was when the possession ended we only have when the possession ended in a goal. When
+  the possession ended in a turnover, and it was our possession, we have the type of
+  throw, but without knowing what the type of throw was when we scored we can't figure
+  out if this variable is relevant for determining our risk of a turnover.
+#+begin_src R :results silent
+  ## Top teams
+  top.poss <- subset(top.data, Who=='Them', select=c('Received_pull', 'Start_location', 'No_of_throws', 'Last_throw'))
+  top.poss <- subset(top.poss, !is.na(No_of_throws))
+  Y.top <- top.poss[, 'Last_throw']
+  Y.top <- ifelse(Y.top == 'turn', 1, 0)
+  ## Recode opponent starting position as a numeric variable with higher numbers meaning
+  ## further from the endzone.
+  top.start.pos.f <- factor(top.poss[,2], levels=c('TG', 'TR', 'TM', 'OM', 'OR', 'OG'), ordered=TRUE)
+  top.start.pos <- as.numeric(top.start.pos.f) - 2 # Makes effect relative to position TR
+
+  top.num.thr <- top.poss[, 3]
+  top.rec.pull <- as.numeric(top.poss[, 1])
+
+  top.lm <- lm(Y.top ~ top.rec.pull + top.num.thr + top.start.pos)
+  top.glm <- glm(Y.top ~ top.rec.pull + top.num.thr + top.start.pos, family=binomial)
+
+
+  ## Consider first mid-level team possessions
+  mid.poss <- subset(mid.data, Who=='Them', select=c('Received_pull', 'Start_location', 'No_of_throws', 'Last_throw'))
+  mid.poss <- subset(mid.poss, !is.na(No_of_throws))
+  Y.mid <- mid.poss[, 'Last_throw']
+  Y.mid <- ifelse(Y.mid == 'turn', 1, 0)
+  ## Recode opponent starting position as a numeric variable with higher numbers meaning
+  ## further from the endzone.
+  Start.pos.f <- factor(mid.poss[,2], levels=c('TG', 'TR', 'TM', 'OM', 'OR', 'OG'), ordered=TRUE)
+  Start.pos <- as.numeric(Start.pos.f) - 2 # Makes effect relative to position TR
+
+  num.thr <- mid.poss[, 3]
+  rec.pull <- as.numeric(mid.poss[, 1])
+
+  mid.lm <- lm(Y.mid ~ rec.pull + num.thr + Start.pos)
+  mid.glm <- glm(Y.mid ~ rec.pull + num.thr + Start.pos, family=binomial)
+  plot(jitter(Start.pos), num.thr, col=ifelse(Y == 1, 'red', 'black'))
+
+  ## OMW possessions vs mid
+  omw.v.mid <- subset(mid.data, Who == 'Us', select=c('Received_pull', 'Start_location', 'No_of_throws', 'Last_throw'))
+  omw.v.mid <- subset(omw.v.mid, !is.na(No_of_throws))
+  Y.omw.mid <- omw.v.mid[, 'Last_throw']
+  Y.omw.mid <- ifelse(Y.omw.mid == 'turn', 1, 0)
+
+  omw.mid.thr <- omw.v.mid[, 3]
+  omw.mid.recp <- as.numeric(omw.v.mid[, 1])
+  omw.mid.start.f <- factor(omw.v.mid[, 2], levels=c('OG', 'OR', 'OM', 'TM', 'TR', 'TG'))
+  omw.mid.start <- as.numeric(omw.mid.start.f) - 2
+
+  omw.mid.glm <- glm(Y.omw.mid ~ omw.mid.recp + omw.mid.thr + omw.mid.start, family=binomial)
+
+  ## OMW possessions vs top
+  omw.v.top <- subset(top.data, Who == 'Us', select=c('Received_pull', 'Start_location', 'No_of_throws', 'Last_throw'))
+  omw.v.top <- subset(omw.v.top, !is.na(No_of_throws))
+  Y.omw.top <- omw.v.top[, 'Last_throw']
+  Y.omw.top <- ifelse(Y.omw.top == 'turn', 1, 0)
+
+  omw.top.thr <- omw.v.top[, 3]
+  omw.top.recp <- as.numeric(omw.v.top[, 1])
+  omw.top.start.f <- factor(omw.v.top[, 2], levels=c('OG', 'OR', 'OM', 'TM', 'TR', 'TG'))
+  omw.top.start <- as.numeric(omw.top.start.f) - 2
+
+  omw.top.glm <- glm(Y.omw.top ~ omw.top.recp + omw.top.thr + omw.top.start, family=binomial)
+#+end_src
+
+#+begin_src R :results output
+  summary(top.glm)
+  summary(omw.top.glm)
+  summary(mid.glm)
+  summary(omw.mid.glm)
+#+end_src
+
+#+results:
+#+begin_example
+
+Call:
+glm(formula = Y.top ~ top.rec.pull + top.num.thr + top.start.pos, 
+    family = binomial)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.2719  -0.8331  -0.4393   1.0689   2.4880  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)  
+(Intercept)    0.51665    0.85798   0.602    0.547  
+top.rec.pull  -0.03455    0.84323  -0.041    0.967  
+top.num.thr   -0.29711    0.13518  -2.198    0.028 *
+top.start.pos  0.04124    0.26880   0.153    0.878  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 49.572  on 40  degrees of freedom
+Residual deviance: 41.781  on 37  degrees of freedom
+AIC: 49.781
+
+Number of Fisher Scoring iterations: 5
+
+Call:
+glm(formula = Y.omw.top ~ omw.top.recp + omw.top.thr + omw.top.start, 
+    family = binomial)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.1502   0.1689   0.3579   0.7249   1.7798  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)  
+(Intercept)     2.1171     1.3687   1.547    0.122  
+omw.top.recp    0.6492     0.9984   0.650    0.516  
+omw.top.thr    -0.5088     0.2131  -2.387    0.017 *
+omw.top.start   0.4962     0.4323   1.148    0.251  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 41.054  on 36  degrees of freedom
+Residual deviance: 30.083  on 33  degrees of freedom
+AIC: 38.083
+
+Number of Fisher Scoring iterations: 5
+
+Call:
+glm(formula = Y.mid ~ rec.pull + num.thr + Start.pos, family = binomial)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-2.0993  -0.9595   0.5248   0.9220   1.8161  
+
+Coefficients:
+            Estimate Std. Error z value Pr(>|z|)    
+(Intercept) -0.46849    0.54259  -0.863 0.387900    
+rec.pull    -0.71653    0.44342  -1.616 0.106111    
+num.thr     -0.17334    0.05935  -2.920 0.003495 ** 
+Start.pos    0.72539    0.19343   3.750 0.000177 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 153.44  on 112  degrees of freedom
+Residual deviance: 129.66  on 109  degrees of freedom
+AIC: 137.66
+
+Number of Fisher Scoring iterations: 3
+
+Call:
+glm(formula = Y.omw.mid ~ omw.mid.recp + omw.mid.thr + omw.mid.start, 
+    family = binomial)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.9018  -1.0588   0.5984   0.9381   1.7808  
+
+Coefficients:
+              Estimate Std. Error z value Pr(>|z|)   
+(Intercept)   -0.26840    0.52886  -0.508  0.61179   
+omw.mid.recp   0.73749    0.51125   1.443  0.14916   
+omw.mid.thr   -0.17560    0.05354  -3.280  0.00104 **
+omw.mid.start  0.50957    0.18430   2.765  0.00569 **
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 153.44  on 112  degrees of freedom
+Residual deviance: 132.59  on 109  degrees of freedom
+AIC: 140.59
+
+Number of Fisher Scoring iterations: 4
+#+end_example
+
+* Conversion rates
+  What was our probability of scoring given that we:
+  1. Gained possession of the disc (either from a pull or opponent's turnover)
+  2. Received the pull
+  3. Gained possession after an opponent's turnover
+  4. Got possession a certain distance from the goal line.
+  How did these probabilities compare to our opponents, stratified by their quality?
+#+begin_src R :results silent
+  conv.rate <- function(data, cond='TRUE') {
+      tmp <- subset(data, eval(parse(text=cond)))
+      N <- nrow(tmp)
+      rate <- length(which(tmp$Last_throw == 'score')) / N
+      se <- sqrt(rate * (1 - rate) / N)
+      c(rate, se, N)
+  }
+
+  ## Overall conversion rates
+  top.conv <- conv.rate(top.poss)
+  mid.conv <- conv.rate(mid.poss)
+  omw.mid.conv <- conv.rate(omw.v.mid)
+  omw.top.conv <- conv.rate(omw.v.top)
+
+  ## Received the pull
+  top.pull <- conv.rate(top.poss, 'Received_pull == TRUE')
+  mid.pull <- conv.rate(mid.poss, 'Received_pull == TRUE')
+  omw.mid.pull <- conv.rate(omw.v.mid, 'Received_pull == TRUE')
+  omw.top.pull <- conv.rate(omw.v.top, 'Received_pull == TRUE')
+
+  ## From an opponent turnonver
+  top.npull <- conv.rate(top.poss, 'Received_pull == FALSE')
+  mid.npull <- conv.rate(mid.poss, 'Received_pull == FALSE')
+  omw.mid.npull <- conv.rate(omw.v.mid, 'Received_pull == FALSE')
+  omw.top.npull <- conv.rate(omw.v.top, 'Received_pull == FALSE')
+
+  ## By starting field position
+  omw.mid.loc <- c()
+  for (x in c('"TG"', '"TR"', '"TM"', '"OM"', '"OR"')) {
+      cond <- paste('Start_location == ', x)
+      omw.mid.loc <- rbind(omw.mid.loc, conv.rate(omw.v.mid, cond))
+  }
+
+  omw.top.loc <- c()
+  for (x in c('"TG"', '"TR"', '"TM"', '"OM"', '"OR"')) {
+      cond <- paste('Start_location == ', x)
+      omw.top.loc <- rbind(omw.top.loc, conv.rate(omw.v.top, cond))
+  }
+
+  mid.loc <- c()
+  for (x in c('"OG"', '"OR"', '"OM"', '"TM"', '"TR"')) {
+      cond <- paste('Start_location == ', x)
+      mid.loc <- rbind(mid.loc, conv.rate(mid.poss, cond))
+  }
+
+  top.loc <- c()
+  for (x in c('"OG"', '"OR"', '"OM"', '"TM"', '"TR"')) {
+      cond <- paste('Start_location == ', x)
+      top.loc <- rbind(top.loc, conv.rate(top.poss, cond))
+  }
+
+#+end_src
+
+** Conversion rates from pulls and turnovers
+
+ #+name: conversion_rates
+ #+begin_src R :results graphics :file Figures/conversion_rates.png
+   score.freq <- c(omw.mid.conv[1], mid.conv[1], omw.top.conv[1], top.conv[1], omw.mid.pull[1],
+		   mid.pull[1], omw.top.pull[1], top.pull[1], omw.mid.npull[1], mid.npull[1],
+		   omw.top.npull[1], top.npull[1])
+   score.se <- c(omw.mid.conv[2], mid.conv[2], omw.top.conv[2], top.conv[2], omw.mid.pull[2],
+		 mid.pull[2], omw.top.pull[2], top.pull[2], omw.mid.npull[2], mid.npull[2],
+		   omw.top.npull[2], top.npull[2])
+   score.n <- c(omw.mid.conv[3], mid.conv[3], omw.top.conv[3], top.conv[3], omw.mid.pull[3],
+		mid.pull[3], omw.top.pull[3], top.pull[3], omw.mid.npull[3], mid.npull[3],
+		   omw.top.npull[3], top.npull[3])
+   gr <- factor(c(rep('Overall', 4), rep('Pull received', 4), rep('From turnover', 4)),
+		levels=c('Overall', 'Pull received', 'From turnover'), ordered=TRUE)
+   lb2 <- rep(c('OMW vs Mid', 'Mid teams', 'OMW vs Top', 'Top teams'), 3)
+   dotchart3(score.freq, lb2, groups=gr, auxdata=score.n, xlim=c(0,1), xlab='Scoring frequency',
+	     auxtitle='N possessions', pch=20, lcolor='white', col=c('red', 'black'),
+	     main='Per Possession Scoring Frequency')
+   abline(v=0:10/10, lty=3, col='#00000022')
+   low <- score.freq - 1.96 * score.se
+   upp <- score.freq + 1.96 * score.se
+   y.seg <- c(13:16, 7:10, 1:4)
+   segments(low, y.seg, upp, y.seg, col=c('red', 'black'))
+ #+end_src
+
+ #+results: conversion_rates
+ [[file:Figures/conversion_rates.png]]
+
+ #+begin_src R :noweb yes :results graphics :file Figures/conversion_rates.pdf
+ <<conversion_rates>>
+ #+end_src
+
+ What the above plot tells us:
+ 1. The top teams score about 70% of the time when they get possession of the
+    disc. This is consistent whether they got the disc from a pull or from an
+    opponent's turnover.
+ 2. The mid-level teams tended to have a higher chance of scoring, about 50% of the time,
+    when they received the pull compared to when they got the disc from our turnover.
+ 3. In contrast, when we received the pull against a mid-level team, we scored only
+    about 34% of the time without turning it over. (O-line what's up!!) We need to double
+    that rate to step up to the next level.
+
+** Conversion rates based on starting field position
+
+#+name: posit_conv_rate
+#+begin_src R :results graphics :file Figures/posit_conv_rate.png :width 700 :height 700
+  par.orig <- par(mfcol=c(2,2))
+  lb <- c("Defensive\ngoal", "Defensive\nredzone", "Defensive\nmidfield", "Attacking\nmidfield",
+	  "Attacking\nredzone")
+
+  ## Against mid-level teams
+  par(mar=c(2, 4, 2, 1))
+  plot(0:4, mid.loc[,1], type='o', ylim=c(0,1), pch=20, xaxt='n', xlab='', ylab='Scoring frequency')
+  points(0:4, omw.mid.loc[,1], type='o', pch=20, col='red')
+  axis(1, at=0:4, labels=lb, tck=0.01)
+  abline(h=0:10/10, lty=3, col='#00000033')
+  title(main="Mid-level teams")
+  legend("topleft", legend=c('Mid-level teams', 'OMW vs Mid-level'), lty=1, col=c('black', 'red'),
+	 bty='n')
+
+  par(mar=c(4, 4, 0, 1))
+  (bp <- barplot(rbind(mid.loc[,3], omw.mid.loc[, 3]), beside=TRUE, ylim=c(0,50),
+		 names.arg=lb, col=c('black', 'red3')))
+  title(xlab="Starting position", ylab="Number of possessions starting at position")
+  par(mar=c(5, 4, 4, 2) + 0.1)
+
+  ## Against top teams
+  par(mar=c(2, 4, 2, 1))
+  plot(0:4, top.loc[,1], type='o', ylim=c(0,1), pch=20, xaxt='n', xlab='', ylab='Scoring frequency')
+  points(0:4, omw.top.loc[,1], type='o', pch=20, col='red')
+  axis(1, at=0:4, labels=lb, tck=0.01)
+  abline(h=0:10/10, lty=3, col='#00000033')
+  title(main="Top-level teams")
+  legend("topright", legend=c('Top-level teams', 'OMW vs Top-level'), lty=1, col=c('black', 'red'),
+	 bty='n')
+
+  par(mar=c(4, 4, 0, 1))
+  (bp <- barplot(rbind(top.loc[,3], omw.top.loc[, 3]), beside=TRUE, ylim=c(0,50),
+		 names.arg=lb, col=c('black', 'red3')))
+  title(xlab="Starting position", ylab="Number of possessions starting at position")
+  par(mar=c(5, 4, 4, 2) + 0.1)
+
+
+  par(par.orig)
+#+end_src
+
+#+results: posit_conv_rate
+[[file:Figures/posit_conv_rate.png]]
+
+#+begin_src R :noweb yes :results graphics :file Figures/posit_conv_rate.pdf
+<<posit_conv_rate>>
+#+end_src
+
+In the left column are the statistics from games against the mid-level teams, while on
+the right are the games against the top teams. The top row shows how often we (in red)
+or our opponents (in black) score without turning it over when gaining possession a
+specified distance from the endzone. The start positions on the left are more distant
+from the scoring endzone. On the bottom are the number of times the teams gained
+possession in each field area.
+
+Take-aways from these plots:
+1. We have very similar conversion rate to other mid-level teams, given a starting
+   field position, though very low when starting in our defensive half of the field
+   between the brick mark and midfield line.
+2. The good news was that when we gained possession in the attacking redzone we
+   converted 90% of the time.
+3. The bad news is that we convert only 30% of the time when we get the disc in our
+   own endzone.
+4. The top teams turned the disc over in their half of the field, giving us a short
+   field, very rarely (86% of the time we started our possession in either our own
+   redzone or goal). On the other hand, about 28% of the time they were able to
+   give themselves a short field by causing a turnover in the half of the field they
+   were attacking.
+5. Giving ourselves a short field is a huge gain in conversion rates. Against mid-level
+   teams we did this 18% of the time. Our defense should aim to push that up to
+   25% or higher.
+6. Against other mid-level teams we won the field position battle, giving up a short
+   field 13% of the time but getting a short field 18% of the time.

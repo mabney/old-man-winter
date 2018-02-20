@@ -1,0 +1,372 @@
+Opponent,Point,Who,Received_pull,Start_location,No_of_throws,Last_throw,Shot_on_goal,SG_origin,SG_destination,SG_thrower,SG_receiver,Turnover_type,Turnover_cause,Turnover_throw,Turnover_blame
+Surly,0-1,Them,T,OR,6,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Surly,0-2,Us,T,TR,6,turn,T,HF,B,Marc,Kentaro,Thr,BC,HB,Marc
+Surly,0-2,Them,F,OG,18,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Surly,0-3,Us,T,TG,4,turn,T,HF,M,Abney,Chris,Drop,BE,HB,Chris 
+Surly,0-3,Them,F,OG,3,score,T,MF,M,NA,NA,NA,NA,NA,NA
+Surly,0-4,Us,T,TG,2,turn,F,NA,NA,NA,NA,Thr,D,MF,Marc
+Surly,0-4,Them,F,TR,1,score ,T,RB,B,NA,NA,NA,NA,NA,NA
+Surly,1-4,Us,F,TG,5,score,T,HB,M,Pepe,Paul A,NA,NA,NA,NA
+Surly,1-5,Them,T,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Surly,1-5,Us,F,OM,3,turn,T,MM,B,Angelo,Gwinn,Thr,BC,HH,Angelo
+Surly,1-5,Them,F,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Surly,1-5,Us,F,TR,4,turn,T,MF,F,Abney,Conour,Thr,BC,HB,Abney
+Surly,1-5,Them,F,OG,10,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Surly,2-5,Us,T,TG,4,turn,T,HF,F,Mark M,Graham,Thr,BC,HF,Mark M
+Surly,2-5,Them,F,OG,7,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Surly,2-5,Us,F,TR,7,score,T,MB,F,Pepe,Graham,NA,NA,NA,NA
+Surly,2-6,Them,T,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Surly,2-6,Us,F,OR,3,turn,T,RF,M,Gwinn,Crispin,Thr,BC,MH,Gwinn
+Surly,2-6,Them,F,OG,10,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Surly,2-7,Us,T,TR,6,turn,T,MM,M,Andy,Kentaro,Thr,BC,HF,Andy
+Surly,2-7,Them,F,OG,10,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Surly,3-7,Us,T,TG,8,score,T,RB,B,Andy,Paul A,NA,NA,NA,NA
+Surly,3-8,Them,T,OG,4,score,T,MF,B,NA,NA,NA,NA,NA,NA
+Surly,3-9,Us,T,TR,2,turn,F,NA,NA,NA,NA,Thr,BE,DF,Ben
+Surly,3-9,Them,F,TR,4,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Surly,3-10,Us,T,TR,4,turn,F,NA,NA,NA,NA,Thr,BE,MB,Paul A
+Surly,3-10,Them,F,TM,7,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Surly,4-10,Us,T,TG,12,score,T,RB,B,Crispin,Keith ,NA,NA,NA,NA
+Surly,4-11,Them,T,OG,11,score,T,MF,M,NA,NA,NA,NA,NA,NA
+Surly,4-12,Us,T,TG,2,turn,F,NA,NA,NA,NA,Thr,BC,HF,Mark M
+Surly,4-12,Them,F,OR,8,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Surly,5-12,Us,T,TR,19,score,T,RF,F,Conour,Chris,NA,NA,NA,NA
+Surly,5-13,Them,T,OM,2,score,T,HF,M,NA,NA,NA,NA,NA,NA
+Surly,5-14,Us,T,NA,NA,turn,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Surly,6-14,Them,F,OG,8,score,T,MF,M,NA,NA,NA,NA,NA,NA
+Surly,7-14,Us,T,TG,5,score,T,HF,F,Andy,Kentaro,NA,NA,NA,NA
+Surly,7-15,Them,T,OR,5,score,T,MF,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,0-1,Them,T,OR,8,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Endless Sunset,1-1,Us,T,TG,2,turn,T,HB,F,Marc,Taggart,Thr,BE,HF,Marc
+Endless Sunset,1-1,Them,F,OR,6,turn,T,HM,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,1-1,Us,F,TR,2,turn,T,HM,M,Andy,Kentaro,Thr,BE,HB,Andy
+Endless Sunset,1-1,Them,F,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,1-1,Us,F,OR,1,score,T,RB,B,Mark M,Marc,NA,NA,NA,NA
+Endless Sunset,2-1,Them,T,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,2-1,Us,F,TR,3,score,T,RF,M,Conour,Bradley,NA,NA,NA,NA
+Endless Sunset,2-2,Them,T,OR,2,score,T,HF,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,3-2,Us,T,TR,8,score,T,MM,F,Andy,Kentaro,NA,NA,NA,NA
+Endless Sunset,3-3,Them,T,OR,4,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Us,T,NA,NA,turn,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Them,F,OR,8,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Us,F,TM,6,turn,T,MM,M,Pepe,Hix,Thr,BE,HB,Pepe
+Endless Sunset,4-3,Them,F,OG,4,turn,T,RF,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Us,F,TG,1,turn,T,HF,M,Marc,Taggart,Thr,BE,HF,Marc
+Endless Sunset,4-3,Them,F,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Us,F,OM,2,turn,F,NA,NA,NA,NA,Thr,BE,MF,Paul A
+Endless Sunset,4-3,Them,F,OG,7,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,4-3,Us,F,OR,4,score,T,HF,M,Pepe,Taggart,NA,NA,NA,NA
+Endless Sunset,4-4,Them,T,OG,17,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Endless Sunset,5-4,Us,T,TG,15,turn,F,NA,NA,NA,NA,Thr,BE,MF,Mark M
+Endless Sunset,5-4,Them,F,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,5-4,Us,F,OR,3,score,T,RB,F,Mark M,Kentaro,NA,NA,NA,NA
+Endless Sunset,6-4,Them,T,OR,8,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,6-4,Us,F,TR,7,score,T,HB,B,Bradley,Conour,NA,NA,NA,NA
+Endless Sunset,6-5,Them,T,OR,7,score,T,MM,B,NA,NA,NA,NA,NA,NA
+Endless Sunset,7-5,Us,T,TR,8,turn,T,HB,B,Andy,Kentaro,Thr,BC,HB,Andy
+Endless Sunset,7-5,Them,F,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,7-5,Us,F,TR,1,score,T,RB,B,Andy,Paul A,NA,NA,NA,NA
+Endless Sunset,8-5,Them,T,OR,3,turn,T,RF,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-5,Us,F,TG,1,turn,T,HB,B,Marc,Conour,Thr,BE,HF,Marc
+Endless Sunset,8-5,Them,F,OG,10,turn,T,MM,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-5,Us,F,TG,5,turn,F,NA,NA,NA,NA,Thr,BE,MB,Bradley
+Endless Sunset,8-5,Them,F,OG,6,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-5,Us,F,OM,1,turn,T,MB,F,Bradley,Conour,Thr,BC,MB,Bradley
+Endless Sunset,8-5,Them,F,OG,5,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-5,Us,F,TM,3,turn,T,RF,F,Paul G,Bradley,Thr,BE,MF,Paul G
+Endless Sunset,8-5,Them,F,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-5,Us,F,OR,1,score,T,RM,B,Conour,Bradley,NA,NA,NA,NA
+Endless Sunset,Halftime,Them,T,NA,NA,Halftime,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,8-6,Us,T,TR,9,turn,T,RF,F,Paul A,Pepe,Thr,BE,MF,Paul A
+Endless Sunset,8-6,Them,F,OG,9,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Endless Sunset,9-6,Us,T,TG,25,score,T,RM,B,Marc,Hix,NA,NA,NA,NA
+Endless Sunset,10-6,Them,T,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,10-6,Us,F,OR,9,score,T,RF,F,Allocco,Darrin,NA,NA,NA,NA
+Endless Sunset,10-7,Them,T,OG,7,turn,T,RF,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,10-7,Us,F,TG,2,turn,F,NA,NA,NA,NA,Thr,BE,MF,Counour
+Endless Sunset,10-7,Them,F,TR,5,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Endless Sunset,11-7,Us,T,TR,2,turn,T,HB,B,Marc,Taggart,Thr,BC,HB,Marc
+Endless Sunset,11-7,Them,F,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,11-7,Us,F,OM,3,score,T,RF,F,Andy,Keith ,NA,NA,NA,NA
+Endless Sunset,12-7,Them,T,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,12-7,Us,F,TM,3,turn,F,NA,NA,NA,NA,Thr,D,MB,Abney
+Endless Sunset,12-7,Them,F,TM,2,turn,T,MM,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,12-7,Us,F,TG,5,score,T,RM,F,Chris,Noah,NA,NA,NA,NA
+Endless Sunset,12-8,Them,T,TM,6,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Endless Sunset,12-9,Us,T,TR,4,turn,F,NA,NA,NA,NA,Thr,BC,MF,Mark M
+Endless Sunset,12-9,Them,F,TR,2,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,13-9,Us,T,TM,14,score,T,MF,F,Allocco,Bradley,NA,NA,NA,NA
+Endless Sunset,13-10,Them,T,OG,10,turn,T,RM,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,13-10,Us,F,TG,4,turn,T,MF,F,Bradley,Conour,Thr,BC,MF,Bradley
+Endless Sunset,13-10,Them,F,OG,2,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Endless Sunset,14-10,Us,T,TR,14,turn,T,RM,F,Frank,Dan,Thr,BC,MF,Frank
+Endless Sunset,14-10,Them,F,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,14-10,Us,F,TR,2,turn,F,NA,NA,NA,NA,Thr,BE,MH,Frank
+Endless Sunset,14-10,Them,F,TR,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Endless Sunset,14-10,Us,F,OM,2,score,T,RF,B,Dan,Jerry,NA,NA,NA,NA
+Critical Mass,1-0,Us,T,TM,12,turn,F,NA,NA,NA,NA,Drop,BE,MF,Mark M
+Critical Mass,1-0,Them,F,OR,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,1-0,Us,F,TM,1,turn,F,NA,NA,NA,NA,Thr,BE,HB,Ben
+Critical Mass,1-0,Them,F,OG,7,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,1-0,Us,F,TR,2,score,T,RF,F,Andy,Kentaro,NA,NA,NA,NA
+Critical Mass,2-0,Them,T,OM,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,2-0,Us,F,TM,1,turn,T,HB,B,Conour,Chris,Drop,BE,HB,Chris 
+Critical Mass,2-0,Them,F,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,2-0,Us,F,OR,2,score,T,MM,M,Conour,Chris,NA,NA,NA,NA
+Critical Mass,3-0,Them,T,OR,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,3-0,Us,F,OR,2,score,T,RF,F,Abney,Conour,NA,NA,NA,NA
+Critical Mass,4-0,Them,T,OM,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,4-0,Us,F,OM,8,score,T,RM,B,Andy,Ben,NA,NA,NA,NA
+Critical Mass,5-0,Them,T,OR,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,5-0,Us,F,OR,3,score,T,RF,F,Allocco,Angelo,NA,NA,NA,NA
+Critical Mass,5-1,Them,T,OR,2,turn,T,HB,B,NA,NA,NA,NA,NA,NA
+Critical Mass,5-1,Us,F,TG,4,turn,T,HM,M,Pepe,Hix,Thr,BC,HB,Pepe
+Critical Mass,5-1,Them,F,OR,3,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Critical Mass,6-1,Us,T,TR,14,score,T,RM,F,Jerry,Taggart,NA,NA,NA,NA
+Critical Mass,6-2,Them,T,OR,6,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Critical Mass,6-3,Us,T,TM,19,turn,T,RF,F,Ben,Pepe,Thr,BE,MF,Ben
+Critical Mass,6-3,Them,F,OG,9,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,6-3,Us,F,TR,5,turn,F,NA,NA,NA,NA,Thr,BC,MF,Frank
+Critical Mass,6-3,Them,F,OM,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,6-3,Us,F,TR,1,turn,F,NA,NA,NA,NA,Thr,BE,MF,Ben
+Critical Mass,6-3,Them,F,TR,1,turn,T,RB,B,NA,NA,NA,NA,NA,NA
+Critical Mass,6-3,Us,F,TG,1,turn,F,NA,NA,NA,NA,Drop,BE,MF,Pepe
+Critical Mass,6-3,Them,F,TR,2,score,T,RB,F,NA,NA,NA,NA,NA,NA
+Critical Mass,6-4,Us,T,TM,5,turn,F,NA,NA,NA,NA,Thr,BC,MB,Conour
+Critical Mass,6-4,Them,F,OM,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,6-4,Us,F,TR,4,turn,F,NA,NA,NA,NA,Thr,BE,MF,Allocco
+Critical Mass,6-4,Them,F,OM,11,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,6-4,Us,F,TM,4,turn,F,NA,NA,NA,NA,Drop,BE,MF,Chris 
+Critical Mass,6-4,Them,F,OM,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,6-4,Us,F,TR,1,turn,F,NA,NA,NA,NA,Thr,BC,HB,Bradley
+Critical Mass,6-4,Them,F,TR,8,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Critical Mass,7-4,Us,T,TR,14,turn,F,NA,NA,NA,NA,Thr,BE,HB,Graham
+Critical Mass,7-4,Them,F,OR,3,turn,T,HM,M,NA,NA,NA,NA,NA,NA
+Critical Mass,7-4,Us,F,TR,3,turn,F,NA,NA,NA,NA,Drop,BE,MF,Taggart
+Critical Mass,7-4,Them,F,TR,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,7-4,Us,F,TR,11,score,T,RB,B,Ben,Kentaro,NA,NA,NA,NA
+Critical Mass,8-4,Them,T,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,8-4,Us,F,OR,3,turn,F,NA,NA,NA,NA,Thr,BE,MB,Gwinn
+Critical Mass,8-4,Them,F,OR,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,8-4,Us,F,OR,1,score,T,RF,F,Allocco,Abney,NA,NA,NA,NA
+Critical Mass,9-4,Them,T,OM,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,9-4,Us,F,TR,8,score,T,RM,M,Abney,Chris,NA,NA,NA,NA
+Critical Mass,10-4,Them,T,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,10-4,Us,F,OR,3,score,T,RF,R,Allocco,Dan,NA,NA,NA,NA
+Critical Mass,10-5,Them,T,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,10-5,Us,F,OM,8,turn,T,RF,R,Andy,Graham,Thr,BE,MF,Andy
+Critical Mass,10-5,Them,F,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Critical Mass,10-5,Us,F,TR,4,turn,F,NA,NA,NA,NA,drop,BE,MF,Mark M
+Critical Mass,10-5,Them,F,OR,1,turn,T,HM,M,NA,NA,NA,NA,NA,NA
+Critical Mass,10-5,Us,F,TG,11,turn,F,NA,NA,NA,NA,Thr,BE,MB,John A
+Critical Mass,10-5,Them,F,OR,6,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Hootenany,0-1,Us,T,TG,5,turn,T,HB,B,Andy,Kentaro,Thr,BE,HB,Andy
+Hootenany,0-1,Them,F,OG,5,score,T,HB,B,NA,NA,NA,NA,NA,NA
+Hootenany,1-1,Us,T,TR,4,turn,T,HB,B,Andy,Taggart,Thr,BE,HB,Andy
+Hootenany,1-1,Them,F,OG,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,1-1,Us,F,TR,3,score,T,HM,B,Andy,Marc,NA,NA,NA,NA
+Hootenany,2-1,Them,T,OR,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,2-1,Us,F,OM,9,score,T,RM,F,Abney,Bradley,NA,NA,NA,NA
+Hootenany,3-1,Them,T,OM,4,turn,T,HM,B,NA,NA,NA,NA,NA,NA
+Hootenany,3-1,Us,F,TG,6,score,T,RB,B,Keith,Ernie,NA,NA,NA,NA
+Hootenany,4-1,Them,T,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,4-1,Us,F,TR,10,score,T,RM,B,Taggart,Pepe,NA,NA,NA,NA
+Hootenany,4-2,Them,T,OG,8,score,T,MM,M,NA,NA,NA,NA,NA,NA
+Hootenany,5-2,Us,T,TG,11,score,T,MB,B,Andy,Paul A,NA,NA,NA,NA
+Hootenany,5-3,Them,T,OR,9,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Hootenany,6-3,Us,T,TG,9,score,T,HF,F,Marc,Kentaro,NA,NA,NA,NA
+Hootenany,6-4,Them,T,OM,17,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Hootenany,7-4,Us,T,TG,5,score,T,HB,B,Marc,Graham,NA,NA,NA,NA
+Hootenany,7-5,Them,T,OG,13,score,T,HM,F,NA,NA,NA,NA,NA,NA
+Hootenany,8-5,Us,T,TG,13,score,T,RF,F,Ben,Kentaro,NA,NA,NA,NA
+Hootenany,8-6,Them,T,OR,10,score,T,RF,M,NA,NA,NA,NA,NA,NA
+Hootenany,9-6,Us,T,TG,12,turn,T,HB,B,Marc,Graham,Thr,BC,HB,Marc
+Hootenany,9-6,Them,F,OG,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,9-6,Us,F,TR,2,score,T,RM,F,Marc,Graham,NA,NA,NA,NA
+Hootenany,9-7,Them,T,NA,NA,score,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,10-7,Us,T,TG,3,turn,F,NA,NA,NA,NA,Thr,BE,HB,Marc
+Hootenany,10-7,Them,F,OR,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,10-7,Us,F,OM,13,score,T,MM,F,Marc,Andy,NA,NA,NA,NA
+Hootenany,11-7,Them,T,OG,2,turn,T,HM,M,NA,NA,NA,NA,NA,NA
+Hootenany,11-7,Us,F,TG,11,score,T,RF,F,Chris,Gwinn,NA,NA,NA,NA
+Hootenany,11-8,Them,T,OG,13,score,T,RM,B,NA,NA,NA,NA,NA,NA
+Hootenany,11-9,Us,T,TR,8,turn,F,NA,NA,NA,NA,Thr,BE,MF,Mark M
+Hootenany,11-9,Them,F,TM,5,score,T,MF,F,NA,NA,NA,NA,NA,NA
+Hootenany,11-10,Us,T,TG,4,turn,F,NA,NA,NA,NA,Thr,BE,MF,Taggart
+Hootenany,11-10,Them,F,OM,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,11-10,Us,F,TM,3,turn,F,NA,NA,NA,NA,Thr,BE,MF,John A
+Hootenany,11-10,Them,F,OM,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,11-10,Us,F,TM,12,turn,F,NA,NA,NA,NA,Drop,BE,MF,John A
+Hootenany,11-10,Them,F,TM,1,score,T,HB,B,NA,NA,NA,NA,NA,NA
+Hootenany,12-10,Us,T,NA,NA,score,T,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,12-11,Them,T,OR,8,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Hootenany,13-11,Us,T,TG,7,turn,T,MF,F,Andy,Taggart,Thr,BC,MF,Andy
+Hootenany,13-11,Them,F,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,13-11,Us,F,OR,2,score,T,HF,B,Marc,Kentaro,NA,NA,NA,NA
+Hootenany,13-12,Them,T,OR,5,turn,T,MM,M,NA,NA,NA,NA,NA,NA
+Hootenany,13-12,Us,F,TG,8,turn,F,NA,NA,NA,NA,Thr,BE,DB,Bradley
+Hootenany,13-12,Them,F,TR,1,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Hootenany,14-12,Us,T,TM,1,turn,T,HM,M,Mark M,Andy,Thr,BC,HF,Mark M
+Hootenany,14-12,Them,F,OG,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,14-12,Us,F,OR,4,turn,T,RF,F,Andy,Kentaro,Thr,BC,MF,Andy
+Hootenany,14-12,Them,F,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,14-12,Us,F,OM,3,score,T,RB,B,Marc,Kentaro,NA,NA,NA,NA
+Hootenany,14-13,Them,T,OG,12,score,T,MM,F,NA,NA,NA,NA,NA,NA
+Hootenany,14-14,Us,T,TG,4,turn,T,HM,M,Andy,Taggart,Thr,BE,HB,Andy
+Hootenany,14-14,Them,F,OG,5,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,14-14,Us,F,TG,4,turn,F,NA,NA,NA,NA,Thr,BE,HB,Paul A
+Hootenany,14-14,Them,F,OM,1,score,T,HF,B,NA,NA,NA,NA,NA,NA
+Hootenany,15-14,Us,T,TG,4,turn,T,HF,M,Marc,Paul A,Thr,BC,HF,Marc
+Hootenany,15-14,Them,F,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Hootenany,15-14,Us,F,OR,1,score,T,RF,F,Pepe,Ben,NA,NA,NA,NA
+Johnny Walker,1-2,Them,T,OM,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Johnny Walker,1-2,Us,F,TR,1,turn,T,HB,F,Conour,Bradley,Thr,BE,HF,Conour
+Johnny Walker,1-2,Them,F,OG,2,score,T,HM,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,1-3,Us,T,TG,1,turn,F,NA,NA,NA,NA,Thr,BE,MB,Frank
+Johnny Walker,1-3,Them,F,OR,2,score,T,RM,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,2-3,Us,T,NA,NA,score,T,NA,NA,NA,NA,NA,NA,NA,NA
+Johnny Walker,2-4,Them,T,OM,3,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Johnny Walker,2-5,Us,T,TG,12,turn,T,RB,M,Ben,Noah,Thr,BE,MF,Ben
+Johnny Walker,2-5,Them,F,OG,4,score,T,RF,B,NA,NA,NA,NA,NA,NA
+Johnny Walker,2-6,Us,T,TG,3,turn,F,NA,NA,NA,NA,Drop,BE,MF,Paul G
+Johnny Walker,2-6,Them,F,TR,6,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-6,Us,T,TG,10,score,T,RM,F,Graham,Mark M,NA,NA,NA,NA
+Johnny Walker,3-7,Them,T,OR,5,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-8,Us,T,TR,4,turn,T,MM,M,Andy,Hix,Thr,BC,MH,Andy
+Johnny Walker,3-8,Them,F,OM,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-8,Us,F,TR,1,turn,F,NA,NA,NA,NA,Thr,BC,MF,Conour
+Johnny Walker,3-8,Them,F,TR,12,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-8,Us,F,TR,5,turn,F,NA,NA,NA,NA,Thr,BE,MF,Andy
+Johnny Walker,3-8,Them,F,OG,12,score,T,RF,M,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-9,Us,T,TG,5,turn,F,NA,NA,NA,NA,Thr,D,DF,Bradley
+Johnny Walker,3-9,Them,F,TR,2,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-10,Us,T,TR,6,turn,F,NA,NA,NA,NA,Thr,BC,MF,Angelo
+Johnny Walker,3-10,Them,F,TM,3,turn,T,RF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-10,Us,F,TG,7,turn,F,NA,NA,NA,NA,Thr,BC,MB,Angelo
+Johnny Walker,3-10,Them,F,TM,1,turn,T,HF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-10,Us,F,TG,4,turn,F,NA,NA,NA,NA,Thr,BC,MF,Frank
+Johnny Walker,3-10,Them,F,TM,14,score,T,RB,M,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-11,Us,T,TG,5,turn,F,NA,NA,NA,NA,Thr,BE,MF,Abney
+Johnny Walker,3-11,Them,F,TM,13,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-12,Us,T,TM,5,turn,T,MM,M,Andy,Kentaro,Thr,BE,MH,Andy
+Johnny Walker,3-12,Them,F,TG,8,score,T,MM,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,3-13,Us,T,TG,3,turn,F,NA,NA,NA,NA,Thr,BE,MB,Darrin
+Johnny Walker,3-13,Them,F,OR,6,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Johnny Walker,4-13,Us,T,TR,7,turn,F,NA,NA,NA,NA,Thr,BC,MH,Jerry
+Johnny Walker,4-13,Them,F,OM,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Johnny Walker,4-13,Us,F,OM,3,score,T,RF,F,Chris,Bradley,NA,NA,NA,NA
+Johnny Walker,4-14,Them,T,OG,3,turn,T,HF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,4-14,Us,F,TG,4,turn,F,NA,NA,NA,NA,Drop,BE,MB,Allocco
+Johnny Walker,4-14,Them,F,TM,1,turn,T,MF,F,NA,NA,NA,NA,NA,NA
+Johnny Walker,4-14,Us,F,TG,7,turn,T,RF,F,Gwinn,Abney,Thr,BC,MF,Gwinn
+Johnny Walker,4-14,Them,F,OG,12,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Johnny Walker,5-14,Us,T,OM,6,score,T,RF,F,Wayne,Jerry,NA,NA,NA,NA
+Johnny Walker,5-15,Them,T,OM,15,score,T,MB,M,NA,NA,NA,NA,NA,NA
+Kalakala,2-1,Us,T,TR,11,score,T,MB,B,Ben,Taggart,NA,NA,NA,NA
+Kalakala,2-2,Them,T,NA,NA,score,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,2-3,Us,T,TR,3,turn,F,NA,NA,NA,NA,Thr,BC,MH,Kentaro
+Kalakala,2-3,Them,F,OM,11,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,2-3,Us,F,TM,5,turn,T,MM,B,Marc,Graham,Thr,BE,MB,Marc
+Kalakala,2-3,Them,F,OG,6,score,T,RM,F,NA,NA,NA,NA,NA,NA
+Kalakala,3-3,Us,T,TR,7,score,T,RB,B,Chris,Taggart,NA,NA,NA,NA
+Kalakala,3-4,Them,T,OG,17,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Kalakala,3-5,Us,T,TG,4,turn,F,NA,NA,NA,NA,Thr,D,MB,Pepe
+Kalakala,3-5,Them,F,TR,1,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Kalakala,4-5,Us,T,TR,5,turn,F,NA,NA,NA,NA,Thr,BC,MH,Frank
+Kalakala,4-5,Them,F,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,4-5,Us,F,TR,2,score,T,HB,F,Pepe,Graham,NA,NA,NA,NA
+Kalakala,4-6,Them,T,OR,3,turn,T,HF,B,NA,NA,NA,NA,NA,NA
+Kalakala,4-6,Us,F,TG,2,turn,F,NA,NA,NA,NA,Thr,BC,MF,Allocco
+Kalakala,4-6,Them,F,TM,5,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,4-6,Us,F,TR,4,turn,T,MF,B,Conour,Chris ,Thr,BE,MH,Conour
+Kalakala,4-6,Them,F,OG,7,turn,T,RM,M,NA,NA,NA,NA,NA,NA
+Kalakala,4-6,Us,F,TG,5,turn,F,NA,NA,NA,NA,Drop,BE,DF,Angelo
+Kalakala,4-6,Them,F,OG,8,turn,T,MM,F,NA,NA,NA,NA,NA,NA
+Kalakala,4-6,Us,F,TG,2,turn,F,NA,NA,NA,NA,Thr,BE,HB,Bradley
+Kalakala,4-6,Them,F,OG,3,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Kalakala,5-6,Us,T,TR,11,score,T,MB,B,Pepe,Taggart,NA,NA,NA,NA
+Kalakala,5-7,Them,T,OR,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,5-7,Us,F,TR,10,turn,F,NA,NA,NA,NA,Thr,BE,MF,Gwinn
+Kalakala,5-7,Them,F,OR,7,turn,T,RF,F,NA,NA,NA,NA,NA,NA
+Kalakala,5-7,Us,F,TG,5,turn,F,NA,NA,NA,NA,Thr,BC,HF,Allocco
+Kalakala,5-7,Them,F,OR,3,score,T,RM,F,NA,NA,NA,NA,NA,NA
+Kalakala,5-8,Us,T,TG,6,turn,F,NA,NA,NA,NA,Drop,BE,MB,Kentaro
+Kalakala,5-8,Them,F,OM,4,turn,T,MM,F,NA,NA,NA,NA,NA,NA
+Kalakala,5-8,Us,F,TG,17,turn,T,MF,M,Pepe,Taggart,Thr,BC,MH,Pepe
+Kalakala,5-8,Them,F,OG,6,score,T,RB,F,NA,NA,NA,NA,NA,NA
+Kalakala,Halftime,Us,T,NA,NA,Halftime,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,5-9,Them,T,OR,3,score,T,HF,F,NA,NA,NA,NA,NA,NA
+Kalakala,6-9,Us,T,TG,15,score,T,RM,M,Andy,Taggart,NA,NA,NA,NA
+Kalakala,7-9,Them,T,OR,14,turn,T,RF,F,NA,NA,NA,NA,NA,NA
+Kalakala,7-9,Us,F,TG,6,score,T,RM,F,Conour,Keith ,NA,NA,NA,NA
+Kalakala,7-10,Them,T,OR,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,7-10,Us,F,OM,7,turn,T,RF,F,Paul G,Darrin,Thr,BE,MF,Paul G
+Kalakala,7-10,Them,F,OG,10,score,T,HF,M,NA,NA,NA,NA,NA,NA
+Kalakala,8-10,Us,T,TR,12,score,T,RF,F,Jerry,Marc,NA,NA,NA,NA
+Kalakala,9-10,Them,T,OM,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,9-10,Us,F,OM,3,turn,T,MM,M,Abney,Conour,Thr,BC,MF,Abney
+Kalakala,9-10,Them,F,OG,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,9-10,Us,F,OR,2,score,T,RF,F,Chris,Ernie,NA,NA,NA,NA
+Kalakala,9-11,Them,T,OM,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,9-11,Us,F,TM,9,turn,T,MB,B,Bradley,Darrin,Thr,BE,MB,Bradley
+Kalakala,9-11,Them,F,OG,11,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,9-11,Us,F,TM,6,turn,F,NA,NA,NA,NA,Thr,BE,DB,Bradley
+Kalakala,9-11,Them,F,OR,6,score,T,MM,B,NA,NA,NA,NA,NA,NA
+Kalakala,10-11,Us,T,TR,8,turn,F,NA,NA,NA,NA,Thr,BC,MF,Ben
+Kalakala,10-11,Them,F,OR,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Kalakala,10-11,Us,F,OM,14,score,T,RB,B,Marc,Kentaro,NA,NA,NA,NA
+Kalakala,10-12,Them,T,OR,5,score,T,MM,B,NA,NA,NA,NA,NA,NA
+Kalakala,11-12,Us,T,TR,3,turn,T,HB,B,Marc,Taggart,Thr,BC,HB,Marc
+Kalakala,11-12,Them,F,OG,22,turn,T,RB,B,NA,NA,NA,NA,NA,NA
+Kalakala,11-12,Us,F,TG,5,score,T,HF,F,Andy,Marc,NA,NA,NA,NA
+Kalakala,11-13,Them,T,OR,16,score,T,RM,M,NA,NA,NA,NA,NA,NA
+Reckon,1-0,Us,T,TR,17,score,T,RM,M,Andy,Kentaro,NA,NA,NA,NA
+Reckon,2-0,Them,T,OG,2,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,2-0,Us,F,OM,1,score,T,MM,B,Allocco,Paul G,NA,NA,NA,NA
+Reckon,3-0,Them,T,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,3-0,Us,F,TM,10,score,T,RM,M,Allocco,Keith ,NA,NA,NA,NA
+Reckon,4-0,Them,T,OG,11,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,4-0,Us,F,TR,4,score,T,RF,F,Andy,Mark M,NA,NA,NA,NA
+Reckon,4-1,Them,T,OM,4,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Reckon,4-2,Us,T,NA,NA,turn,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,4-2,Them,F,NA,NA,score,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,4-3,Us,T,TG,8,turn,F,NA,NA,NA,NA,Thr,BE,HB,Frank
+Reckon,4-3,Them,F,TR,1,score,T,RB,F,NA,NA,NA,NA,NA,NA
+Reckon,4-4,Us,T,TG,18,turn,F,NA,NA,NA,NA,Thr,BC,MF,Keith
+Reckon,4-4,Them,F,OR,11,turn,T,RB,B,NA,NA,NA,NA,NA,NA
+Reckon,4-4,Us,F,TG,10,turn,F,NA,NA,NA,NA,Thr,BE,MB,Abney
+Reckon,4-4,Them,F,OM,6,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Reckon,4-5,Us,T,TG,5,turn,F,NA,NA,NA,NA,Thr,BC,MF,Marc
+Reckon,4-5,Them,F,OM,2,turn,T,MF,B,NA,NA,NA,NA,NA,NA
+Reckon,4-5,Us,F,TG,4,turn,F,NA,NA,NA,NA,Thr,BC,HF,Marc
+Reckon,4-5,Them,F,OR,8,score,T,RF,F,NA,NA,NA,NA,NA,NA
+Reckon,5-5,Us,T,TM,3,turn,T,MB,M,Taggart,Pepe,Thr,BC,HH,Taggart
+Reckon,5-5,Them,F,OG,4,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,5-5,Us,F,TM,1,turn,T,HF,B,Pepe,Bradley,Thr,BE,HB,Pepe
+Reckon,5-5,Them,F,OG,6,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,5-5,Us,F,TR,5,score,T,RF,F,Pepe,Taggart,NA,NA,NA,NA
+Reckon,5-6,Them,T,OG,8,score,T,MB,F,NA,NA,NA,NA,NA,NA
+Reckon,6-6,Us,T,TG,9,score,T,MF,F,Pepe,Kentaro,NA,NA,NA,NA
+Reckon,6-7,Them,T,OR,13,score,T,MM,M,NA,NA,NA,NA,NA,NA
+Reckon,7-7,Us,T,TG,13,score,T,MB,B,Andy,Taggart,NA,NA,NA,NA
+Reckon,7-8,Them,T,OM,2,score,T,HF,F,NA,NA,NA,NA,NA,NA
+Reckon,Halftime,Us,T,NA,NA,Halftime,NA,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,7-9,Them,T,OR,5,score,T,MF,F,NA,NA,NA,NA,NA,NA
+Reckon,7-10,Us,T,TM,11,turn,F,NA,NA,NA,NA,Thr,BC,MB,Pepe
+Reckon,7-10,Them,F,OR,11,score,T,RF,M,NA,NA,NA,NA,NA,NA
+Reckon,7-11,Us,T,TG,4,turn,F,NA,NA,NA,NA,Thr,BE,MF,Marc
+Reckon,7-11,Them,F,TR,1,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Reckon,7-12,Us,T,TG,5,turn,F,NA,NA,NA,NA,Thr,BE,MF,Allocco
+Reckon,7-12,Them,F,TR,1,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Reckon,7-13,Us,T,TR,4,turn,T,HF,F,Allocco,Paul G,Thr,BC,HF,Allocco
+Reckon,7-13,Them,F,OG,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,7-13,Us,F,TR,2,turn,F,NA,NA,NA,NA,Thr,BE,MB,Paul G
+Reckon,7-13,Them,F,TR,3,turn,T,HF,F,NA,NA,NA,NA,NA,NA
+Reckon,7-13,Us,F,TG,2,turn,F,NA,NA,NA,NA,Thr,BE,MF,Allocco
+Reckon,7-13,Them,F,TR,2,score,T,RB,B,NA,NA,NA,NA,NA,NA
+Reckon,8-13,Us,T,TR,17,score,T,RM,M,Andy,Graham,NA,NA,NA,NA
+Reckon,9-13,Them,T,OM,3,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,9-13,Us,F,TM,1,turn,T,HB,M,Angelo,Keith ,Thr,BC,HF,Angelo
+Reckon,9-13,Them,F,OG,1,turn,F,NA,NA,NA,NA,NA,NA,NA,NA
+Reckon,9-13,Us,F,TR,6,score,T,HF,F,Angelo,Crispin,NA,NA,NA,NA
+Reckon,9-14,Them,T,OR,10,score,T,RM,F,NA,NA,NA,NA,NA,NA
