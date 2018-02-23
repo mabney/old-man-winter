@@ -1,3 +1,7 @@
+
+#+options: toc:nil
+
+#+begin_export html
 ---
 layout: single
 title: Personal Page
@@ -10,14 +14,11 @@ header:
   image_description: "."
   caption: ""
 ---
+#+end_export
 
-
-# My Simple Website
-
+* My Simple Website
 Here is where I'll put various pointers to different personal things.
 
+** Family
 
-## Family
-
-
-## Ultimate
+** Ultimate
