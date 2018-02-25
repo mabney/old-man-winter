@@ -3,7 +3,7 @@ layout: single
 title: Old Man Winter
 description: All the information
 author_profile: false
-excerpt: "Winter is coming."
+excerpt: "Winter is coming"
 header:
   overlay_image: /images/IMG_2861_crop.jpg
   overlay_filter: 0.5
@@ -17,11 +17,11 @@ header:
 This is mostly just a test without any real information.
 
 
-## [Statistical analysis](_pages/nationals_2017_analysis.html)
+## [Statistical analysis](analysis2017/)
 
 A brief analysis of the data from Nationals 2017.
 
 
-## [Defensive playbook](_pages/defensive_playbook.html)
+## [Defensive playbook](defense2018)
 
 An outline of our defensive sets.

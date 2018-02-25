@@ -3,6 +3,17 @@
 #+Options: num:nil
 #+Options: H:5
 
+#+begin_export html
+---
+layout: single
+title: "Defensive Playbook 2018"
+permalink: /defense2018/
+author_profile: false
+header:
+  image: /images/IMG_1053_crop.jpg
+---
+#+end_export
+
 * General principles
   * Do not disc watch! Check periodically on the disc, but focus on the
     thrower's targets.
