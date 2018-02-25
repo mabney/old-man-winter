@@ -4,21 +4,23 @@
 #+begin_export html
 ---
 layout: single
-title: Personal Page
+title: Old Man Winter
 description: All the information
-author_profile: true
-excerpt: "Excerpt stuff"
+author_profile: false
+excerpt: "Winter is coming."
 header:
-  overlay_image: /images/nats2017_1.jpg
+  overlay_image: /images/IMG_2861_crop.jpg
   overlay_filter: 0.5
   image_description: "."
   caption: ""
 ---
 #+end_export
 
-* My Simple Website
-Here is where I'll put various pointers to different personal things.
+* Simple Website for Old Man Winter
+This is mostly just a test without any real information.
 
-** Family
+** [[file:_pages/nationals_2017_analysis.html][Statistical analysis]]
+   A brief analysis of the data from Nationals 2017.
 
-** Ultimate
+** [[file:_pages/defensive_playbook.html][Defensive playbook]]
+   An outline of our defensive sets.

@@ -1,10 +1,10 @@
 ---
 layout: single
-title: "All About Me"
+title: "All About Old Man Winter"
 permalink: /about/
-author_profile: true
+author_profile: false
+header:
+  image: /images/IMG_2580.jpg
 ---
 
-Everything you might want to know about me:
-
-I'm still trying to figure out what to put here. Hold on, just bear with me&#x2026;.
+Old Man Winter is a Grandmaster Ultimate team based in Chicago. The team first formed in 2015 and has qualified for USA Masters National Championships every year since then, finishing 8th in 2017.

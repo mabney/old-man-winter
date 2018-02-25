@@ -12,13 +12,13 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en"
-title                    : "Mark Arturo Abney: The man, the myth"
+title                    : "Old Man Winter Ultimate"
 title_separator          : "-"
 name                     : "Mark Arturo Abney"
-description              : "A truly amazing website."
-url                      : https://mabney.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
+description              : "Information about and for the Old Man Winter Ultimate team."
+url                      : "https://mabney.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : # "/old-man-winter" # the subpath of your site, e.g. "/blog"
+repository               : "mabney/old-man-winter" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -86,10 +86,10 @@ analytics:
 
 # Site Author
 author:
-  name             : "The Essential Info"
+  name             : # "The Essential Info"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Right Here"
+  bio              : # "I am an amazing person."
+  location         : # "Right Here"
   email            :
   uri              :
   home             : # null (default), "absolute or relative url to link to author home"
