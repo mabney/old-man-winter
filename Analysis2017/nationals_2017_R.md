@@ -11,10 +11,12 @@ header:
 
 # Introduction
 
-I'll take a look at the performance of Old Man Winter at Nationals 2017 too see where we did well, and what we should improve on to step up to the next level. Because the stats are primarily offense oriented, I will be doing this by gauging how well we did on offense in comparison to our opponents. I will be looking at two basic measures:
+I'll take a look at the performance of Old Man Winter at Nationals 2017 to see where we did well, and what we should improve on to step up to the next level. Because the recorded stats are primarily offense oriented, I will be doing this by gauging how well we did on offense in comparison to our opponents. I will be looking at two basic measures:
 
 -   **Completion rate:** The fraction of throws that are caught. This could be broken down into throws that meet certain criteria.
 -   **Conversion rate:** The fraction of **possessions** that result in a goal (versus being turned over). Again, possessions can be broken down into certain types (e.g. received the pull or not).
+
+The data for this analysis can be found in [this](https://github.com/mabney/old-man-winter/blob/master/Analysis2017/nationals_2017_data.csv) csv file.
 
 
 # Completion rates
@@ -29,12 +31,12 @@ We can look at our completion rates across all games at Nationals 2017, as a gen
 
 ### Takeaway
 
-Our overall pass completion rate was `0.89`, which is not very good. Worse, however, is our rate of completions when we are actually trying to score `0.58`, which is terrible.
+Our overall pass completion rate was `0.89`, which is not very good. Worse, however, is our rate of completions when we are actually trying to score, `0.58`, which is terrible.
 
 
 ## Other teams
 
-Lets compare our completion rates against the teams we played. Here, I group the opponents into 'Top' teams, Surly and Johnny Walker; and 'Mid' teams, all our other opponents except Critical Mass.
+Let's compare our completion rates against the completion rates of our opponents. Here, I group the opponents into 'Top' teams, Surly and Johnny Walker; and 'Mid' teams, all our other opponents except Critical Mass.
 
 ![img](Figures/vs_top_mid_rates.png)
 
@@ -71,10 +73,10 @@ The 95% confidence intervals are wide because of some low numbers of throws, but
 
 What was our probability of scoring given that we:
 
-1.  Gained possession of the disc (either from a pull or opponent's turnover)
-2.  Received the pull
-3.  Gained possession after an opponent's turnover
-4.  Got possession a certain distance from the goal line.
+1.  Gained possession of the disc (either from a pull or opponent's turnover)?
+2.  Received the pull?
+3.  Gained possession after an opponent's turnover?
+4.  Got possession a certain distance from the goal line?
 
 How did these probabilities compare to our opponents, stratified by their quality?
 
@@ -90,14 +92,14 @@ What the above plot tells us:
 
 1.  The top teams score about 70% of the time when they get possession of the disc. This is consistent whether they got the disc from a pull or from an opponent's turnover.
 2.  The mid-level teams tended to have a higher chance of scoring, about 50% of the time, when they received the pull compared to when they got the disc from our turnover.
-3.  In contrast, when we received the pull against a mid-level team, we scored only about 34% of the time without turning it over. (O-line what's up!!) We need to double that rate to step up to the next level.
+3.  In contrast, when we received the pull against a mid-level team, we scored only about 34% of the time without turning it over. (O-line what's up?!) We need to double that rate to step up to the next level.
 
 
 ## Conversion rates based on starting field position
 
 ![img](Figures/posit_conv_rate.png)
 
-In the left column are the statistics from games against the mid-level teams, while on the right are the games against the top teams. The top row shows how often we (in red) or our opponents (in black) score without turning it over when gaining possession a specified distance from the endzone. The start positions on the left side of the plots are more distant from the scoring endzone. On the bottom are the number of times the teams gained possession in each field area.
+In the left column are the statistics from games against the mid-level teams, while on the right are the games against the top teams. The top row shows how often we (in red) or our opponents (in black) score without turning it over when gaining possession a specified distance from the endzone. The start positions on the left sides of the plots are more distant from the scoring endzone. The bottom bar charts are the number of times the teams gained possession in each field area.
 
 
 ### Takeaways
@@ -112,7 +114,7 @@ In the left column are the statistics from games against the mid-level teams, wh
 
 # Final conclusions
 
-1.  Our shots on goal completion rate seriously stank, though the stank relatively less when we were in the redzone. The spin doctor says we have a great opportunity to make large strides simply by improving our shots on goal.
+1.  Our shots on goal completion rate seriously stank, though they stank relatively less when we were in the redzone. The spin doctor says we have a great opportunity to make large strides simply by improving our shots on goal.
 2.  We need to improve our huck game, but not because we want to score (or try to score) from the huck more often. This needs to be more of a strategy that allows us to advance the disc to the redzone where we have much higher success.
-3.  Converting when we receive the pull, without turning it over, is a huge weakness, even compared to other mid-level teams.
+3.  Converting when we receive the pull, without turning it over, is a huge weakness, even compared to other mid-level teams (35% vs 52%).
 4.  Giving ourselves a short field by forcing the other team to turn it over in their half of the field can bring huge dividends (90% conversion vs 30% conversion). Similarly, not turning it over in our half of the field is tremendously beneficial.
